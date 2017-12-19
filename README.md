@@ -1,5 +1,5 @@
 # ansible-cloudera_parcels
-Ansible module to manage Cloudera Manager parcels, using the cm_api Python lib. 
+Ansible module to manage Cloudera Manager parcels, using the [cm_api](https://cloudera.github.io/cm_api/docs/python-client/) Python lib. 
 
 This module come from my company internal Ansible toolbox. [Groupe Cyrès][1]
 
