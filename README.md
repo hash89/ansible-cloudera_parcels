@@ -23,15 +23,15 @@ This module come from my company internal Ansible toolbox. [Groupe Cyrès][1]
 
 Examples:
 ```
-- name: Download parcel for CDH
+- name: Download parcel for latest CDH parcel (available on the Cloudera Manager)
   cloudera_parcels:
     cm_login: john
     cm_password: toto18
     api_version: 18
     cm_host: cloudera.mycompany.com
-    cluster_name: test	
+    cluster_name: test
     product: CDH
-    version: 5.13.0-1.cdh5.13.0.p0.29
+    version: latest
     state: present
 
 - name: Distribute parcel for CDH
@@ -40,7 +40,7 @@ Examples:
     cm_password: toto18
     api_version: 18
     cm_host: cloudera.mycompany.com
-    cluster_name: test	
+    cluster_name: test
     product: CDH
     version: 5.13.0-1.cdh5.13.0.p0.29
     state: distributed
@@ -51,7 +51,7 @@ Examples:
     cm_password: toto18
     api_version: 18
     cm_host: cloudera.mycompany.com
-    cluster_name: test	
+    cluster_name: test
     product: CDH
     version: 5.13.0-1.cdh5.13.0.p0.29
     state: activated
@@ -62,8 +62,28 @@ Examples:
     cm_password: toto18
     api_version: 18
     cm_host: cloudera.mycompany.com
-    cluster_name: test	
+    cluster_name: test
     product: CDH
     version: 5.13.0-1.cdh5.13.0.p0.29
     state: absent
+
+- name: Retreive informations for all parcels on a cluster
+  cloudera_parcels:
+    cm_login: john
+    cm_password: toto18
+    api_version: 18
+    cm_host: cloudera.mycompany.com
+    cluster_name: test
+    state: infos
+
+- name: Retreive informations for a sspecific parcel on a cluster
+  cloudera_parcels:
+    cm_login: john
+    cm_password: toto18
+    api_version: 18
+    cm_host: cloudera.mycompany.com
+    cluster_name: test
+    product: CDH
+    version: 5.13.0-1.cdh5.13.0.p0.29
+    state: infos
 ```
