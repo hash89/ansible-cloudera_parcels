@@ -7,8 +7,9 @@ This module come from my company internal Ansible toolbox. [Groupe Cyrès][1]
 
 # Contributor
 
-- Hadrien Puissant (hpuissant@cyres.fr)
-- Antoine Pointeau (apointeau@cyres.fr)
+- Hadrien Puissant (@HadrienPuissant)
+- Antoine Pointeau (@Rocketknow)
+- Antoine Boudot (@AntoineBoudot)
 
 # Instruction
 
